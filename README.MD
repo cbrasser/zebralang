@@ -1,6 +1,6 @@
 # ZEBRALANG
 
 
-Following along the Book _the transpiler book_, I'm writing a little transpiler in go.
+Following along the Book [Writing an Interpreter in Go](https://interpreterbook.com/), I'm writing a little transpiler in go.
 
 
