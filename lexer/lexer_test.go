@@ -1,9 +1,8 @@
-// lexer/lexer_test.go
-
 package lexer
 
 import (
 	"testing"
+
 	"zebra/token"
 )
 
