@@ -7,6 +7,7 @@ import (
 	"io"
 
 	"zebra/lexer"
+	"zebra/parser"
 	"zebra/token"
 )
 
@@ -26,6 +27,10 @@ func Start(in io.Reader, out io.Writer) {
 		line := scanner.Text()
 		l := lexer.New(line)
 
+		p := parser.New(l)
+
+		program := p.ParseProgram()
+		fmt.Println(program)
 		for tok := l.NextToken(); tok.Type != token.EOF; tok = l.NextToken() {
 			fmt.Fprintf(out, "%+v\n", tok)
 		}
